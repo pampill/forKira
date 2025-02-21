@@ -54,13 +54,14 @@ body {
 
 .text-container {
     font-size: 28px; /* Уменьшил */
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
     overflow: hidden;
     border-right: 2px solid black;
     display: inline-block;
     text-align: center;
     padding: 10px;
-    width: 90%;
+    max-width: 90%;
     margin: 0 auto;
 }
 .text-container::after {
@@ -72,10 +73,10 @@ body {
     50% { opacity: 0; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     .text-container {
-        font-size: 22px; /* Еще меньше для мобильных */
-        width: 85%;
+        font-size: 24px; /* Еще меньше для мобильных */
+        width: 80%;
     }
 
     .button {
