@@ -4,19 +4,28 @@ const emojis = ["😜", "🙃", "😋", "😘", "😍", "😊", "😛", "🤯", 
 function scrollToNext(section) {
     document.getElementsByClassName('section')[section].scrollIntoView({ behavior: 'smooth' });
 
+    setTimeout(() => {
+        emojiIndex = (emojiIndex + 1) % emojis.length;
+        document.querySelector(".background-emoji").textContent = emojis[emojiIndex];
+    }, 300);
     // Меняем смайлик
-    emojiIndex = (emojiIndex + 1) % emojis.length;
-    document.querySelector(".background-emoji").textContent = emojis[emojiIndex];
 
-    // Плавное появление текста во 2-й секции
-    if (section === 1) {
-        showText("typewriter3", "ещё сильнее!!! 💖");
-    }
+    setTimeout(() => {
+        // Плавное появление текста во 2-й секции
+        if (section === 1) {
+            showText("typewriter3", "ты супер!!! 😉");
+        }
 
-    // Печать текста в последней секции
-    if (section === 5) {
-        typeWriter("typewriter", "люблю тебя!!!!!!!!!!!!!!!!!!!!!");
-    }
+        // Появление текста с анимацией прыжка для блока 4
+        if (section === 2) {
+            showText("typewriter4", "я безумно рад что мы познакомились");
+        }
+
+        // Печать текста в последней секции
+        if (section === 5) {
+            typeWriter("typewriter", "люблю тебя!!!!!!!!!!!!!!!!!!!!!");
+        }
+    }, 500);    
 }
 
 function showText(elementId, text) {
@@ -33,7 +42,7 @@ function showText(elementId, text) {
         el.innerHTML = text;
         // После того как текст вставлен, добавляем класс для плавного появления
         el.classList.add('show');
-    }, 500); // Добавляем небольшую задержку, чтобы класс show успел примениться
+    }, 1000); // Добавляем небольшую задержку, чтобы класс show успел примениться
 }
 
 function typeWriter(elementId, text) {
