@@ -144,3 +144,17 @@ body {
 .bounce-in {
     animation: bounceIn 1s ease-out;
 }
+
+.final-image {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+/* Медиазапрос для экранов с шириной до 480px (например, iPhones) */
+@media (max-width: 480px) {
+    .final-image {
+        width: 80%; /* Изображение занимает всю ширину экрана */
+        max-width: 400px; /* Ограничиваем максимальную ширину для небольших экранов */
+    }
+}
