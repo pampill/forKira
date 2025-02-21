@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с анимацией</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-emoji">😜</div>
+    
+    <div class="background-emoji"></div>
+    
+    <div class="section">
+        <div class="header-text">Кирка</div>
+        <button class="button" onclick="scrollToNext(1)">НАЖМИ</button>
+    </div>
+
+    <div class="section">
+        <span class="text-container fade-in" id="typewriter2"></span>
+        <button class="button" onclick="scrollToNext(2)">нажми ещё)</button>
+    </div>
+
+    <div class="section">
+        <span class="text-container fade-in" id="typewriter3"></span>
+        <button class="button" onclick="scrollToNext(3)">ещё)))</button>
+    </div>
+
+    <div class="section">
+        <span class="text-container fade-in" id="typewriter4"></span>
+        <button class="button" onclick="scrollToNext(4)">почти дошли</button>
+    </div>
+
+    <div class="section">
+        <button class="button" onclick="scrollToNext(5)">финальная!!!</button>
+    </div>
+
+    <div class="section">
+        <span class="text-container" id="typewriter"></span>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
