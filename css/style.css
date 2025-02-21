@@ -57,21 +57,46 @@ body {
     white-space: normal;
     word-wrap: break-word;
     overflow: hidden;
-    border-right: 2px solid black;
+    /* border-right: 2px solid black; */
     display: inline-block;
     text-align: center;
     padding: 10px;
     max-width: 90%;
     margin: 0 auto;
 }
-.text-container::after {
+/* .text-container::after {
     content: "|";
     animation: blink 0.7s infinite;
+} */
+.typewriter-text {
+    font-size: 28px;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+    border-right: 2px solid black; /* Эффект курсора */
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+    animation: blink 0.7s infinite;
+    
+}
+@keyframes blink {
+    0% {
+        border-right-color: black; /* Курсор видим */
+    }
+    50% {
+        border-right-color: transparent; /* Курсор невидим */
+    }
+    100% {
+        border-right-color: black; /* Курсор снова видим */
+    }
 }
 
-@keyframes blink {
+/* @keyframes blink {
     50% { opacity: 0; }
-}
+} */
 
 @media (max-width: 400px) {
     .text-container {

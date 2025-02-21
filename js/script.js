@@ -52,6 +52,8 @@ function typeWriter(elementId, text) {
 
     el.innerHTML = ''; // Сначала очищаем элемент
 
+    el.classList.add('typewriter-text');
+
     function write() {
         if (i < text.length) {
             el.innerHTML += text.charAt(i);
