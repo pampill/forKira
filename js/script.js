@@ -42,7 +42,7 @@ function showText(elementId, text) {
         el.innerHTML = text;
         // После того как текст вставлен, добавляем класс для плавного появления
         el.classList.add('show');
-    }, 1000); // Добавляем небольшую задержку, чтобы класс show успел примениться
+    }, 300); // Добавляем небольшую задержку, чтобы класс show успел примениться
 }
 
 function typeWriter(elementId, text) {
