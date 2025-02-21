@@ -26,7 +26,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20rem; /* Уменьшил размер эмодзи */
+    font-size: 30rem; /* Уменьшил размер эмодзи */
     opacity: 0.2;
     animation: pulse 1.5s infinite;
 }
@@ -115,7 +115,7 @@ body {
     }
 
     .background-emoji {
-        font-size: 6rem; /* Еще меньше */
+        font-size: 20rem; /* Еще меньше */
     }
 }
 
