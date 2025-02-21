@@ -68,12 +68,14 @@ body {
     content: "|";
     animation: blink 0.7s infinite;
 } */
-.typewriter-text {
+
+
+/* .typewriter-text {
     font-size: 28px;
     white-space: normal;
     word-wrap: break-word;
     overflow: hidden;
-    border-right: 2px solid black; /* Эффект курсора */
+    border-right: 2px solid black; 
     display: inline-block;
     text-align: center;
     padding: 10px;
@@ -81,18 +83,21 @@ body {
     margin: 0 auto;
     animation: blink 0.7s infinite;
     
-}
-@keyframes blink {
+} */
+
+
+
+/* @keyframes blink {
     0% {
-        border-right-color: black; /* Курсор видим */
+        border-right-color: black; 
     }
     50% {
-        border-right-color: transparent; /* Курсор невидим */
+        border-right-color: transparent; 
     }
     100% {
-        border-right-color: black; /* Курсор снова видим */
+        border-right-color: black; 
     }
-}
+} */
 
 /* @keyframes blink {
     50% { opacity: 0; }
