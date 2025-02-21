@@ -11,13 +11,14 @@ body {
 }
 
 .section {
-    height: 100vh;
+    height: 90vh; /* Немного уменьшил высоту для мобильных */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
     width: 100%;
+    padding: 10px; /* Добавил отступы */
 }
 
 .background-emoji {
@@ -25,25 +26,25 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20rem;
+    font-size: 8rem; /* Уменьшил размер эмодзи */
     opacity: 0.2;
     animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
     0% { transform: translate(-50%, -50%) scale(1); }
-    50% { transform: translate(-50%, -50%) scale(1.2); }
+    50% { transform: translate(-50%, -50%) scale(1.1); }
     100% { transform: translate(-50%, -50%) scale(1); }
 }
 
 .button {
-    padding: 15px 30px;
-    font-size: 24px;
+    padding: 12px 24px;
+    font-size: 20px; /* Уменьшил для мобильных */
     background-color: #ff5722;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
@@ -52,29 +53,37 @@ body {
 }
 
 .text-container {
-    font-size: 36px;
+    font-size: 28px; /* Уменьшил */
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid black;
     display: inline-block;
-    word-wrap: break-word; /* Для переноса длинных строк */
-    text-align: center; /* Центрируем текст */
+    text-align: center;
     padding: 10px;
-    width: 90%; /* Ограничиваем ширину для мобильных устройств */
-    margin: 0 auto; /* Центрируем элемент по горизонтали */
+    width: 90%;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .text-container {
-        font-size: 28px; /* Уменьшаем шрифт на мобильных */
-        width: 80%; /* Увеличиваем ширину на мобильных, чтобы текст не был сужен */
+        font-size: 22px; /* Еще меньше для мобильных */
+        width: 85%;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .background-emoji {
+        font-size: 6rem; /* Еще меньше */
     }
 }
 
 .header-text {
-    font-size: 48px;
+    font-size: 40px; /* Уменьшил */
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .fade-in {
@@ -87,22 +96,12 @@ body {
 }
 
 @keyframes bounceIn {
-    0% {
-        transform: scale(0.3); /* Начальный размер */
-        opacity: 0; /* Начальная прозрачность */
-    }
-    50% {
-        transform: scale(1.1); /* Немного увеличиваем */
-    }
-    70% {
-        transform: scale(0.9); /* Уменьшаем обратно */
-    }
-    100% {
-        transform: scale(1); /* Возвращаем к нормальному размеру */
-        opacity: 1; /* Устанавливаем полную видимость */
-    }
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.1); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 .bounce-in {
-    animation: bounceIn 1s ease-out; /* Применяем анимацию */
+    animation: bounceIn 1s ease-out;
 }
